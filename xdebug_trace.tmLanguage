@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>xt</string>
+	</array>
+	<key>name</key>
+	<string>xDebug Trace</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>File Start</string>
+			<key>match</key>
+			<string>^TRACE START .*</string>
+			<key>name</key>
+			<string>keyword.other.xdebug_trace</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.xdebug_trace</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.xdebug_trace</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.xdebug_trace</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>string.unquoted.xdebug_trace</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Function name, args, location</string>
+			<key>match</key>
+			<string>^([0-9. ]*)?-&gt; ([^(]+)\((.*)\)\s(\/[^ ]+:\d+)$</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.xdebug_trace</string>
+	<key>uuid</key>
+	<string>f9720aff-c34b-4440-b4a2-35a1867c7e4a</string>
+</dict>
+</plist>

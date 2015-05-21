@@ -1,0 +1,19 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: xDebug Trace
+scopeName: text.xdebug_trace
+fileTypes: [xt]
+uuid: f9720aff-c34b-4440-b4a2-35a1867c7e4a
+
+patterns:
+- comment: File Start
+  name: keyword.other.xdebug_trace
+  match: ^TRACE START .*
+- comment: Memory, Function Name, arguments, file location
+  match: ^([0-9. ]*)?-> ([^(]+)\((.*)\)\s(\/[^ ]+:\d+)$
+  captures:
+    '1': {name: constant.numeric.xdebug_trace}
+    '2': {name: entity.name.function.xdebug_trace}
+    '3': {name: variable.parameter.xdebug_trace}
+    '4': {name: string.unquoted.xdebug_trace}
+...
